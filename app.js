@@ -20,7 +20,11 @@ $(function() {
 		.on("dragenter", dragEnter)
 		.on("dragleave", dragLeave)
 		.on("drop", drop);
-
+	$("#categories .item").click(function(){
+		var el = $(this);
+		el.parent(".grid").find(".item").removeClass("active");
+		el.addClass("active");
+	})
 
 	/**
 	**	DRAG AND DROP
