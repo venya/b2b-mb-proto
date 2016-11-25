@@ -19,7 +19,7 @@ main {
 
 aside {
 	width: 40%;
-	background: #eee;
+	background: #f6f4f4;
 }
 
 main {
@@ -96,12 +96,16 @@ main h1 {
 	border: dotted silver 1px;
 	text-align: center;
 	color: silver;
-	margin-bottom: 3px;
+	margin-top: 15px;
 }
-
-.remove-basket.drop {
+.remove-basket.active {
 	border-style: solid;
+	color: gray;
+}
+.remove-basket.drop {
 	box-shadow: inset 1px 1px 3px rgba(0,0,0, .2);
+	background: #ff7e40;
+	color: white;
 }
 
 

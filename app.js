@@ -28,9 +28,11 @@ $(function() {
 
 	// product or category started to drag
 	function dragStart(e) {
-		var el = $(this);
 		console.log("drag started");
-		DRAG = el;
+		DRAG = $(this);;
+		if (DRAG.data("type") == "product" && DRAG_existing()) {
+			$(".remove-basket").addClass("active");
+		}
 		// DRAG.id = el.data("id");
 		// DRAG.type = el.data("type");
 		// DRAG.existing = el.parent().hasClass("grid");
@@ -64,6 +66,7 @@ $(function() {
 		console.log("Drop!");
 		var target = $(this);
 		target.removeClass("drop");
+		$(".remove-basket").removeClass("active");
 		if ((target.hasClass("item") || target.hasClass("placeholder")) && DRAG_existing())
 			listMove(DRAG, target);
 		else if (target.hasClass("item") || target.hasClass("placeholder"))
