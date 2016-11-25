@@ -1,6 +1,4 @@
 
-
-
 body {
 	background: white;
 	margin: 0;
@@ -45,6 +43,12 @@ main > h1 {
 }
 aside h1 {
 	box-shadow: inset -6px 0 5px -3px rgba(0,0,0, .3);	
+}
+.btn-close:before {
+	content: "×";
+	color: white;
+	float: right;
+	cursor: pointer;
 }
 
 

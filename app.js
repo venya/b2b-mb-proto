@@ -24,7 +24,8 @@ $(function() {
 		var el = $(this);
 		el.parent(".grid").find(".item").removeClass("active");
 		el.addClass("active");
-	})
+	});
+	$(".btn-close").click(listClear);
 
 	/**
 	**	DRAG AND DROP
@@ -37,9 +38,6 @@ $(function() {
 		if (DRAG.data("type") == "product" && DRAG_existing()) {
 			$(".remove-basket").addClass("active");
 		}
-		// DRAG.id = el.data("id");
-		// DRAG.type = el.data("type");
-		// DRAG.existing = el.parent().hasClass("grid");
 	}
 
 	// test if target can accept draggable object
@@ -89,7 +87,6 @@ $(function() {
 
 	function listAdd(item, toPosition) {
 		// TODO
-		// 1. Add before toPosition (not after)
 		// 2. Do not add when already exists
 		// 3. Rebuild page count
 		// 4. Add/remove placeholders
@@ -111,5 +108,10 @@ $(function() {
 		item.insertBefore(toPosition);
 	}
 
+	function listClear() {
+		console.log("Clear List");
+		$("#products .item").remove();
+		$(".list .item").removeClass("used");
+	}
 
 })
