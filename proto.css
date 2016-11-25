@@ -1,0 +1,223 @@
+
+
+
+body {
+	background: white;
+	margin: 0;
+	font-family: "Open Sans", Helvetica, Arial, sans-seirf;
+	font-size: 12px;
+}
+
+/* LAYOUT */
+aside,
+main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 1; 
+}
+
+aside {
+	width: 40%;
+	background: #eee;
+}
+
+main {
+	width: 60%;
+	background: white;
+	right: 0;
+}
+
+section {
+	margin: 20px;
+}
+
+aside > h1,
+main > h1 {
+	background: #379cd8;
+	color: white;
+	font-size: 15px;
+	padding: 8px 20px;
+	margin: 0;
+}
+main h1 {
+	box-shadow: inset 6px 0 5px -3px rgba(0,0,0, .3);	
+}
+
+
+/* TOOLS */
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.input {
+	display: block;
+	margin-bottom: 15px;
+	width: 100%;
+	font-size: 16px;
+	box-sizing: border-box;
+	outline: none;
+	padding: 10px;
+	border: none;
+	box-shadow: inset 2px 2px 2px rgba(0,0,0, .2);
+}
+
+
+/* LEFT PRODUCT LIST */
+.list {
+	/*overflow: hidden;*/
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+
+.list .item {
+	list-style: none;
+	padding: 5px 10px;
+	border: solid #ddd 1px;
+	background: white;
+	box-sizing: border-box;
+	margin-bottom: 3px;
+	/* ... */
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.list .item.used {
+	color: silver;
+}
+
+.remove-basket {
+	padding: 10px;
+	border: dotted silver 1px;
+	text-align: center;
+	color: silver;
+	margin-bottom: 3px;
+}
+
+.remove-basket.drop {
+	border-style: solid;
+	box-shadow: inset 1px 1px 3px rgba(0,0,0, .2);
+}
+
+
+
+
+/* GRID */
+.grid {
+	/*overflow: hidden;*/
+	list-style: none;
+	padding: 0 20px;
+	margin: 0;
+	user-select: none;
+	position: relative;
+}
+
+.grid .item,
+.grid .placeholder {
+	float: left;
+	list-style: none;
+	box-sizing: border-box;
+	border: solid #eee 1px;
+	background: white;
+	padding: 10px;
+	width: 23%;
+	min-height: 100px;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 10px;
+	/* wrapping */
+	word-break: break-word;
+}
+
+.grid .item {
+	border-color: silver;
+}
+
+/*.dropzone .item:hover,*/
+.item.drop,
+.placeholder.drop {
+	background: #379cd8;
+	border-color: #379cd8;
+	box-shadow: inset 2px 2px 3px rgba(0,0,0, .3);
+	cursor: default;
+}
+
+.dragable .item {
+	cursor: move;
+}
+
+.dragable .item:active,
+.dragable .item.draging {
+	background: white;
+	border-color: silver;
+	box-shadow: 0 2px 8px rgba(0,0,0, .4);
+	z-index: 100;
+}
+
+.prev,
+.next {
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 20px;
+	border: solid silver 1px;
+	box-sizing: border-box;
+	top: 50%;
+	margin-top: -13px;
+	cursor: pointer;
+}
+
+.prev {
+	left: -12px;
+}
+.prev:before {
+	content: "<";
+}
+
+.next {
+	right: -10px;	
+}
+.next:before {
+	content: ">";
+}
+
+.prev.drop,
+.next.drop {
+	background: #379cd8;
+	border-color: #379cd8;
+	color: white;
+}
+
+
+
+/* PAGER */
+.pager {
+	text-align: center;
+}
+
+.pager .page {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: solid #379cd8 1px;
+	border-radius: 10px;
+	background: white;
+	cursor: pointer;
+}
+
+.pager .page.active {
+	background: #379cd8;
+}
+
+.pager .page.drop {
+	border-color: black;
+}
+
+

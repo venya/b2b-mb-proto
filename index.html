@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Builder prototype</title>
+	<link rel="stylesheet" type="text/css" href="proto.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<aside>
+	<h1>Menu Builder</h1>
+	<section>
+		<input class="input" placeholder="Quick Search" typ__e="search">
+		<ul class="list dragable clearfix">
+			<li draggable="true" class="item" data-type="product" data-id="1">Frozen Margarita</li>
+			<li draggable="true" class="item used" data-type="product" data-id="2">Mojito</li>
+			<li draggable="true" class="item" data-type="product" data-id="3">Martini Bianco</li>
+			<li draggable="true" class="item" data-type="product" data-id="4">Martini Rosso</li>
+			<li draggable="true" class="item" data-type="product" data-id="5">Americano</li>
+			<li draggable="true" class="item" data-type="product" data-id="6">Absolut Vodka</li>
+		</ul>
+		<div class="remove-basket" data-accept="product">Drop products here to remove</div>
+	</section>
+</aside>
+
+<main>
+	<h1>Categories</h1>
+	<section>
+		<ul class="grid dragable clearfix" id="categories">
+			<li draggable="true" class="item" data-type="category" data-id="" data-accept="category">Alcohol</li>
+			<li draggable="true" class="item active" data-type="category" data-id="" data-accept="category">Hot Dogs</li>
+			<li draggable="true" class="item" data-type="category" data-id="" data-accept="category">Cofee</li>
+			<li draggable="true" class="item" data-type="category" data-id="" data-accept="category">Soft Drinks</li>
+			<li draggable="true" class="item" data-type="category" data-id="" data-accept="category">Special</li>
+			<li draggable="true" class="item" data-type="category" data-id="" data-accept="category">Sweets &amp; Desserts</li>
+			<li class="prev" data-accept="category"></li>
+			<li class="next" data-accept="category"></li>
+		</ul>
+		<div class="pager">
+			<span class="page active" data-accept="category"></span>
+			<span class="page" data-accept="category"></span>
+		</div>
+	</section>
+
+	<h1>Products</h1>
+	<section>
+		<ul class="grid dragable clearfix" id="products">
+			<li draggable="true" class="item" data-type="product" data-id="1" data-accept="product">Product 1</li>
+			<li draggable="true" class="item" data-type="product" data-id="2" data-accept="product">Product 2</li>
+			<li draggable="true" class="item" data-type="product" data-id="3" data-accept="product">Product 3</li>
+			<li draggable="true" class="item" data-type="product" data-id="4" data-accept="product">Product 4</li>
+			<li draggable="true" class="item" data-type="product" data-id="5" data-accept="product">Product 5</li>
+			<li draggable="true" class="item" data-type="product" data-id="6" data-accept="product">Product 6</li>
+			<li class="placeholder active" data-accept="product"></li>
+			<li class="placeholder"></li>
+			<li class="placeholder"></li>
+			<li class="placeholder"></li>
+			<li class="placeholder"></li>
+			<li class="placeholder"></li>
+			<li class="prev" data-accept="product"></li>
+			<li class="next" data-accept="product"></li>
+		</ul>
+		<div class="pager">
+			<span class="page active" data-accept="product"></span>
+			<span class="page" data-accept="product"></span>
+		</div>
+	</section>
+</main>
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<!-- Mobile Drag-and-Drop polyfill -->
+<script type="text/javascript" src="DragDropTouch.js"></script>
+</body>
+</html>
